@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente Especial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes openGift {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1) rotate(-5deg); }
+            100% { transform: scale(0) rotate(10deg); opacity: 0; }
+        }
+        
+        body {
+            background-image: url('https://images.pond5.com/valentines-day-wooden-table-against-photo-168956497_iconl.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .gift-box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            animation: float 3s ease-in-out infinite;
+            transition: all 0.5s ease;
+            z-index: 10;
+        }
+        
+        .gift-lid {
+            position: absolute;
+            width: 220px;
+            height: 60px;
+            background: linear-gradient(135deg, #f8ad9d 0%, #f08080 100%);
+            top: -30px;
+            left: -10px;
+            border-radius: 5px;
+            transform: rotate(2deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .ribbon {
+            position: absolute;
+            width: 20px;
+            height: 220px;
+            background: #f8f9fa;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        
+        .ribbon::before, .ribbon::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #f8f9fa;
+            border-radius: 50%;
+        }
+        
+        .ribbon::before {
+            top: -30px;
+            left: -20px;
+        }
+        
+        .ribbon::after {
+            bottom: -30px;
+            left: -20px;
+        }
+        
+        .bow {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+        
+        .bow::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            top: 10px;
+            left: 10px;
+            box-shadow: 0 0 0 10px rgba(248, 249, 250, 0.3);
+        }
+        
+        .message {
+            animation: pulse 2s infinite;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f8f9fa;
+            opacity: 0;
+        }
+        
+        .love-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            z-index: 5;
+            opacity: 0;
+            transition: opacity 1s ease;
+            max-width: 80%;
+        }
+        
+        .zodiac-signs {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .zodiac-sign {
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .aries {
+            background-image: url('https://i.imgur.com/3nJQ1Zx.png');
+        }
+        
+        .taurus {
+            background-image: url('https://i.imgur.com/5mKQ1Zy.png');
+        }
+        
+        .gift-open {
+            animation: openGift 1s forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="text-center mb-8 bg-white bg-opacity-70 rounded-lg p-4">
+        <h1 class="text-3xl md:text-4xl font-bold text-red-600 mb-2">Um Presente Especial</h1>
+        <p class="text-lg text-gray-700">Clique no presente para abrir!</p>
+    </div>
+    
+    <div class="relative mb-12">
+        <div class="gift-box cursor-pointer" id="gift">
+            <div class="gift-lid"></div>
+            <div class="ribbon"></div>
+            <div class="bow"></div>
+            
+            <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fas fa-heart text-white text-4xl opacity-70"></i>
+            </div>
+        </div>
+        
+        <div class="love-message" id="loveMessage">
+            <h2 class="text-2xl font-bold text-red-600 mb-3">Eu te amo e estou com saudades!</h2>
+            <p class="text-lg text-gray-700">Do seu amorzão! ❤️</p>
+            <div class="mt-4">
+                <button id="resetBtn" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" id="confettiContainer"></div>
+    
+    <div class="zodiac-signs">
+        <div class="zodiac-sign aries" title="Áries"></div>
+        <div class="zodiac-sign taurus" title="Touro"></div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gift = document.getElementById('gift');
+            const loveMessage = document.getElementById('loveMessage');
+            const resetBtn = document.getElementById('resetBtn');
+            const confettiContainer = document.getElementById('confettiContainer');
+            
+            gift.addEventListener('click', function() {
+                // Animate gift opening
+                gift.classList.add('gift-open');
+                
+                // Show love message after a delay
+                setTimeout(() => {
+                    loveMessage.style.opacity = '1';
+                }, 800);
+                
+                // Create confetti
+                createConfetti();
+            });
+            
+            resetBtn.addEventListener('click', function() {
+                // Hide love message
+                loveMessage.style.opacity = '0';
+                
+                // Reset gift
+                setTimeout(() => {
+                    gift.classList.remove('gift-open');
+                    gift.style.opacity = '1';
+                    gift.style.transform = 'scale(1) rotate(0deg)';
+                }, 300);
+                
+                // Clear confetti
+                confettiContainer.innerHTML = '';
+            });
+            
+            function createConfetti() {
+                const colors = ['#f8f9fa', '#f8ad9d', '#f08080', '#e63946', '#c1121f', '#ffd166', '#06d6a0', '#118ab2'];
+                
+                for (let i = 0; i < 150; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.classList.add('confetti');
+                    
+                    // Random properties
+                    const size = Math.random() * 15 + 5;
+                    const color = colors[Math.floor(Math.random() * colors.length)];
+                    const left = Math.random() * 100;
+                    const animationDuration = Math.random() * 3 + 2;
+                    const animationDelay = Math.random() * 2;
+                    const rotation = Math.random() * 360;
+                    const shape = Math.random();
+                    
+                    // Apply styles
+                    confetti.style.width = `${size}px`;
+                    confetti.style.height = `${size}px`;
+                    confetti.style.backgroundColor = color;
+                    confetti.style.left = `${left}%`;
+                    confetti.style.top = '-20px';
+                    confetti.style.opacity = '1';
+                    confetti.style.transform = `rotate(${rotation}deg)`;
+                    confetti.style.animation = `float ${animationDuration}s ease-in-out ${animationDelay}s infinite`;
+                    
+                    // Random shape
+                    if (shape > 0.7) {
+                        confetti.style.borderRadius = '50%';
+                    } else if (shape > 0.4) {
+                        confetti.style.borderRadius = '0';
+                    } else {
+                        confetti.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
+                    }
+                    
+                    confettiContainer.appendChild(confetti);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
