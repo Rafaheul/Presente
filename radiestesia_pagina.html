@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiestesia Terapêutica | Consultas com Yasnnajára</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #8e44ad 0%, #3498db 100%);
+        }
+        .pendulum-animation {
+            animation: swing 3s infinite ease-in-out;
+            transform-origin: top center;
+        }
+        @keyframes swing {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(15deg); }
+            100% { transform: rotate(0deg); }
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-purple-900">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center">
+                    <i class="fas fa-spa text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-purple-800">Radiestesia Yasnnajára</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-purple-600 transition">Sobre</a>
+                <a href="#services" class="hover:text-purple-600 transition">Serviços</a>
+                <a href="#faq" class="hover:text-purple-600 transition">FAQ</a>
+                <a href="#products" class="hover:text-purple-600 transition">Produtos</a>
+                <a href="#contact" class="hover:text-purple-600 transition">Contato</a>
+            </nav>
+            <button class="md:hidden text-purple-800" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white py-4 px-4 shadow-md" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#about" class="hover:text-purple-600 transition">Sobre</a>
+                <a href="#services" class="hover:text-purple-600 transition">Serviços</a>
+                <a href="#faq" class="hover:text-purple-600 transition">FAQ</a>
+                <a href="#products" class="hover:text-purple-600 transition">Produtos</a>
+                <a href="#contact" class="hover:text-purple-600 transition">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Descubra o poder da Radiestesia</h1>
+                <p class="text-xl mb-8">Equilibre suas energias e encontre respostas através da arte milenar da radiestesia com a terapeuta certificada Yasnnajára.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-white text-purple-800 font-bold py-3 px-8 rounded-full hover:bg-purple-100 transition duration-300 text-center">
+                        Agende sua consulta
+                    </a>
+                    <a href="#about" class="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-purple-800 transition duration-300 text-center">
+                        Saiba mais
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://cdn.pixabay.com/photo/2017/01/31/23/42/decorative-2028034_960_720.png" alt="Pêndulo de radiestesia" class="w-64 pendulum-animation">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Radiesthesia -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">O que é Radiestesia?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-purple-50 p-6 rounded-xl card-hover transition duration-300">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-question-circle text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Definição</h3>
+                    <p class="text-gray-700">Radiestesia é uma técnica milenar que utiliza instrumentos como pêndulos e varetas para detectar e medir energias e vibrações sutis presentes em pessoas, objetos e ambientes.</p>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl card-hover transition duration-300">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-history text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">História</h3>
+                    <p class="text-gray-700">Praticada desde o Egito Antigo, a radiestesia era usada para encontrar água e minerais. Hoje, evoluiu para uma ferramenta de autoconhecimento e equilíbrio energético.</p>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl card-hover transition duration-300">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-bullseye text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Como funciona</h3>
+                    <p class="text-gray-700">O radiestesista atua como um canal, interpretando os movimentos dos instrumentos que respondem às energias investigadas, revelando desequilíbrios e soluções.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Yasnnajára -->
+    <section class="py-16 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Yasnnajára" class="w-64 h-64 object-cover rounded-full border-4 border-purple-200 shadow-lg">
+                        <div class="absolute -bottom-3 -right-3 bg-white p-2 rounded-full shadow-md">
+                            <div class="bg-purple-600 text-white p-2 rounded-full">
+                                <i class="fas fa-award text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">Sobre Yasnnajára</h2>
+                    <p class="text-lg mb-4">Terapeuta holística especializada em Radiestesia com certificação pela ABRAD (Associação Brasileira de Radiestesia e Radiônica).</p>
+                    <p class="mb-6">Com mais de 8 anos de experiência, Yasnnajára já ajudou centenas de pessoas a encontrarem equilíbrio emocional, físico e espiritual através da radiestesia. Sua abordagem combina técnicas tradicionais com conhecimentos modernos de terapia energética.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-purple-100 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-graduation-cap text-purple-600 mr-2"></i>
+                            <span>Certificada ABRAD</span>
+                        </div>
+                        <div class="bg-purple-100 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-star text-purple-600 mr-2"></i>
+                            <span>8+ anos de experiência</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Nossos Serviços</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Sessões personalizadas para atender suas necessidades energéticas e emocionais.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-purple-100 rounded-xl overflow-hidden shadow-sm card-hover transition duration-300">
+                    <div class="bg-purple-600 text-white p-6">
+                        <h3 class="text-xl font-semibold mb-2">Consulta Básica</h3>
+                        <p class="opacity-90">Análise energética completa</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl font-bold text-purple-800 mb-4">R$ 180</div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Análise de chakras</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Identificação de bloqueios</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Orientações personalizadas</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-3 rounded-lg transition duration-300">
+                            Agendar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border border-purple-100 rounded-xl overflow-hidden shadow-lg card-hover transition duration-300 transform scale-105">
+                    <div class="bg-purple-800 text-white p-6 relative">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-purple-900 text-xs font-bold px-2 py-1 rounded-full">POPULAR</div>
+                        <h3 class="text-xl font-semibold mb-2">Consulta Completa</h3>
+                        <p class="opacity-90">Análise + tratamento energético</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl font-bold text-purple-800 mb-4">R$ 280</div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Tudo da consulta básica</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Tratamento com gráficos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Limpeza energética</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Relatório por e-mail</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-purple-800 hover:bg-purple-900 text-white text-center py-3 rounded-lg transition duration-300">
+                            Agendar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border border-purple-100 rounded-xl overflow-hidden shadow-sm card-hover transition duration-300">
+                    <div class="bg-purple-600 text-white p-6">
+                        <h3 class="text-xl font-semibold mb-2">Pacote Mensal</h3>
+                        <p class="opacity-90">Acompanhamento contínuo</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl font-bold text-purple-800 mb-4">R$ 480</div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>4 sessões mensais</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Monitoramento contínuo</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Suporte entre sessões</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Desconto de 15%</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-3 rounded-lg transition duration-300">
+                            Agendar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="py-16 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Para que serve a Radiestesia?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start card-hover transition duration-300">
+                    <div class="text-purple-600 mr-4 mt-1">
+                        <i class="fas fa-heart text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Saúde Emocional</h3>
+                        <p class="text-gray-700 text-sm">Identifica e trata desequilíbrios emocionais, ansiedade, depressão e estresse.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start card-hover transition duration-300">
+                    <div class="text-purple-600 mr-4 mt-1">
+                        <i class="fas fa-home text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Harmonização de Ambientes</h3>
+                        <p class="text-gray-700 text-sm">Detecta e neutraliza energias negativas em casas e locais de trabalho.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start card-hover transition duration-300">
+                    <div class="text-purple-600 mr-4 mt-1">
+                        <i class="fas fa-flask text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Teste de Alimentos</h3>
+                        <p class="text-gray-700 text-sm">Identifica alimentos benéficos ou prejudiciais para seu organismo.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start card-hover transition duration-300">
+                    <div class="text-purple-600 mr-4 mt-1">
+                        <i class="fas fa-briefcase text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Orientação Profissional</h3>
+                        <p class="text-gray-700 text-sm">Ajuda a identificar caminhos profissionais alinhados com seu propósito.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start card-hover transition duration-300">
+                    <div class="text-purple-600 mr-4 mt-1">
+                        <i class="fas fa-people-arrows text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Relações Interpessoais</h3>
+                        <p class="text-gray-700 text-sm">Analisa compatibilidade energética em relacionamentos.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start card-hover transition duration-300">
+                    <div class="text-purple-600 mr-4 mt-1">
+                        <i class="fas fa-spa text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Tratamento Holístico</h3>
+                        <p class="text-gray-700 text-sm">Complementa outros tratamentos terapêuticos e medicinais.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start card-hover transition duration-300">
+                    <div class="text-purple-600 mr-4 mt-1">
+                        <i class="fas fa-search text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Autoconhecimento</h3>
+                        <p class="text-gray-700 text-sm">Ajuda a descobrir padrões inconscientes e potencialidades.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start card-hover transition duration-300">
+                    <div class="text-purple-600 mr-4 mt-1">
+                        <i class="fas fa-moon text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Distúrbios do Sono</h3>
+                        <p class="text-gray-700 text-sm">Identifica causas energéticas de insônia e pesadelos recorrentes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-purple-600 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Depoimentos</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Ana Clara</h4>
+                            <div class="flex text-yellow-300">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="italic">"A consulta com Yasnnajára mudou minha vida. Identificamos bloqueios que nem imaginava e em poucas semanas já senti uma diferença enorme na minha energia e disposição."</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Ricardo</h4>
+                            <div class="flex text-yellow-300">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="italic">"Estava cético no início, mas os resultados falaram por si. A análise da minha casa detectou pontos de energia negativa que coincidiam com onde me sentia mais cansado. Após a harmonização, minha produtividade aumentou."</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Mariana</h4>
+                            <div class="flex text-yellow-300">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="italic">"Yasnnajára tem uma sensibilidade incrível. Suas orientações me ajudaram a tomar decisões profissionais importantes e a entender melhor minhas relações familiares. Recomendo muito!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                <div class="border border-purple-100 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-purple-50 hover:bg-purple-100 transition duration-300 flex justify-between items-center">
+                        <span class="font-medium">A radiestesia tem base científica?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p>A radiestesia trabalha com conceitos de energia sutil que ainda não são completamente explicados pela ciência convencional, mas compartilha princípios com áreas como a física quântica e estudos sobre campos energéticos. Muitos profissionais da saúde reconhecem seus benefícios como terapia complementar.</p>
+                    </div>
+                </div>
+                <div class="border border-purple-100 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-purple-50 hover:bg-purple-100 transition duration-300 flex justify-between items-center">
+                        <span class="font-medium">Como é realizada uma consulta à distância?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p>As consultas à distância são tão eficazes quanto as presenciais. Trabalhamos com a conexão energética que não depende de proximidade física. Você fornece algumas informações básicas e marcamos um horário. Durante a sessão, você estará em um local tranquilo enquanto realizo a análise. Após, discutimos os resultados por chamada de vídeo ou telefone.</p>
+                    </div>
+                </div>
+                <div class="border border-purple-100 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-purple-50 hover:bg-purple-100 transition duration-300 flex justify-between items-center">
+                        <span class="font-medium">Quantas sessões são necessárias?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p>Isso varia conforme cada caso. Algumas pessoas sentem melhora significativa já na primeira sessão, enquanto outras beneficiam-se de um acompanhamento. Normalmente recomendo uma reavaliação após 30 dias para verificar a evolução. Durante a primeira consulta, já consigo indicar um prognóstico mais personalizado.</p>
+                    </div>
+                </div>
+                <div class="border border-purple-100 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-purple-50 hover:bg-purple-100 transition duration-300 flex justify-between items-center">
+                        <span class="font-medium">A radiestesia substitui tratamentos médicos?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p>Não. A radiestesia é uma terapia complementar e não substitui acompanhamento médico ou psicológico. Trabalhamos em conjunto com outros tratamentos, atuando no equilíbrio energético que pode potencializar os resultados, mas sempre orientamos a manter os cuidados convencionais quando necessário.</p>
+                    </div>
+                </div>
+                <div class="border border-purple-100 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 bg-purple-50 hover:bg-purple-100 transition duration-300 flex justify-between items-center">
+                        <span class="font-medium">Posso aprender radiestesia sozinho?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer p-4 hidden">
+                        <p>Embora existam materiais para iniciantes, a radiestesia exige treino e orientação para ser praticada com precisão. Ofereço cursos para quem deseja se aprofundar, começando pelo básico até técnicas avançadas. Recomendo sempre começar com orientação profissional para evitar interpretações equivocadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="py-16 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Produtos de Radiestesia</h2>
+            <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">Materiais selecionados para você praticar ou complementar seu tratamento</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/31/23/42/decorative-2028034_640.png" alt="Pêndulo" class="h-40">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">Pêndulo Cristal Quartzo</h3>
+                        <p class="text-gray-600 text-sm mb-3">Precisão e sensibilidade para iniciantes e profissionais</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-purple-800">R$ 85</span>
+                            <a href="https://exemplo.com/pendulo" target="_blank" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Comprar <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/31/23/42/decorative-2028041_640.png" alt="Gráficos" class="h-40">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">Kit Gráficos Radiestésicos</h3>
+                        <p class="text-gray-600 text-sm mb-3">30 gráficos para diversas aplicações terapêuticas</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-purple-800">R$ 120</span>
+                            <a href="https://exemplo.com/graficos" target="_blank" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Comprar <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/31/23/42/decorative-2028039_640.png" alt="Livro" class="h-40">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">Manual de Radiestesia Moderna</h3>
+                        <p class="text-gray-600 text-sm mb-3">Guia completo com técnicas e exercícios práticos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-purple-800">R$ 65</span>
+                            <a href="https://exemplo.com/livro" target="_blank" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Comprar <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm card-hover transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/31/23/42/decorative-2028036_640.png" alt="Vareta" class="h-40">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-1">Varetas Dual Rod</h3>
+                        <p class="text-gray-600 text-sm mb-3">Para detecção de energias e localização</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-purple-800">R$ 95</span>
+                            <a href="https://exemplo.com/varetas" target="_blank" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Comprar <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="mb-4">Quer recomendações personalizadas de produtos?</p>
+                <a href="#contact" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">
+                    Fale comigo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl overflow-hidden shadow-sm">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
+                        <p class="mb-8">Agende sua consulta ou tire dúvidas sobre radiestesia. Respondo pessoalmente a todos os contatos.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-purple-600 mt-1 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">WhatsApp</h4>
+                                    <a href="https://wa.me/5511999999999" target="_blank" class="text-purple-600 hover:text-purple-800">(11) 99999-9999</a>
+                                    <p class="text-sm text-gray-600 mt-1">Atendimento das 9h às 18h</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-purple-600 mt-1 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">E-mail</h4>
+                                    <a href="mailto:contato@yasnnajara.com" class="text-purple-600 hover:text-purple-800">contato@yasnnajara.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-purple-600 mt-1 mr-4">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Instagram</h4>
+                                    <a href="https://instagram.com/yasnnajara.radiestesia" target="_blank" class="text-purple-600 hover:text-purple-800">@yasnnajara.radiestesia</a>
+                                    <p class="text-sm text-gray-600 mt-1">Dicas diárias sobre radiestesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-white p-8 md:p-12">
+                        <h3 class="text-xl font-semibold mb-6">Agendamento Online</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Serviço de Interesse</label>
+                                <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                                    <option value="Consulta Básica">Consulta Básica (R$ 180)</option>
+                                    <option value="Consulta Completa">Consulta Completa (R$ 280)</option>
+                                    <option value="Pacote Mensal">Pacote Mensal (R$ 480)</option>
+                                    <option value="Outro">Outro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                                <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-purple-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Radiestesia Yasnnajára</h3>
+                    <p class="mb-4">Terapias energéticas para equilíbrio e autoconhecimento.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/yasnnajara.radiestesia" target="_blank" class="text-white hover:text-purple-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="text-white hover:text-purple-300">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="mailto:contato@yasnnajara.com" class="text-white hover:text-purple-300">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-purple-300 transition">Consulta Básica</a></li>
+                        <li><a href="#services" class="hover:text-purple-300 transition">Consulta Completa</a></li>
+                        <li><a href="#services" class="hover:text-purple-300 transition">Pacote Mensal</a></li>
+                        <li><a href="#products" class="hover:text-purple-300 transition">Cursos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.abrad.org.br" target="_blank" class="hover:text-purple-300 transition">ABRAD</a></li>
+                        <li><a href="#faq" class="hover:text-purple-300 transition">Perguntas Frequentes</a></li>
+                        <li><a href="#products" class="hover:text-purple-300 transition">Produtos</a></li>
+                        <li><a href="#" class="hover:text-purple-300 transition">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Newsletter</h4>
+                    <p class="mb-4">Receba dicas e conteúdos sobre radiestesia.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 rounded-l-lg text-gray-900 w-full">
+                        <button type="submit" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-purple-800 mt-12 pt-8 text-center text-purple-300">
+                <p>&copy; 2023 Radiestesia Yasnnajára. Todos os direitos reservados.</p>
+                <p class="mt-2 text-sm">Certificada pela ABRAD - Associação Brasileira de Radiestesia e Radiônica</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300 z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+                
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.nextElementSibling.classList.add('hidden');
+                        q.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to a server
+            // For this example, we'll just show an alert
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
